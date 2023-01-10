@@ -1,0 +1,269 @@
+#copyButton {
+  display: none;
+}
+
+#result {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  background: #e5e5e5;
+}
+
+.grid-container {
+  margin: auto;
+  width: 960px;
+  height: 650px;
+  background: #e5e5e5;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+}
+
+.left {
+  grid-area: left;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60%;
+}
+
+::placeholder {
+  color: #0a3871;
+}
+
+.input {
+  margin-left: 8%;
+  margin-top: 10%;
+  text-align: center;
+  width: 577px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+  border: none;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 150%;
+  background: #e5e5e5;
+  color: #0a3871;
+}
+
+.btns {
+  padding: 0;
+  height: auto;
+}
+
+.paraf {
+  margin-left: 20%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #495057;
+}
+
+.btns-zone {
+  width: fit-content;
+  margin: auto;
+}
+
+.btnEnc {
+  margin-left: 20%;
+  padding: 10px;
+  width: 200px;
+  height: 45px;
+  background: #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.btnDec {
+  padding: 10px;
+  margin-left: 10px;
+  width: 200px;
+  height: 45px;
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  color: #0a3871;
+}
+
+.right {
+  grid-area: right;
+  width: fit-content;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.espera {
+  margin-top: 20%;
+  margin-left: 3%;
+  width: 270px;
+}
+
+.txt {
+  margin: 5%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #343a40;
+}
+
+.msg {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.textArea {
+  margin-left: 5.5%;
+  margin-top: 4%;
+  width: 90%;
+  height: 84.5%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: #ffffff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #495057;
+}
+
+.btnCopy {
+  margin-left: 12.5%;
+  margin-top: 5%;
+  padding: 10px;
+  width: 200px;
+  height: 45px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  color: #0a3871;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  border-radius: 18px;
+  background: #0a3871;
+}
+
+.name {
+  margin-left: 29%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.linkedin {
+  margin-left: 50%;
+  width: 45px;
+}
+
+.github {
+  margin-left: 100%;
+  width: 45px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "left"
+    "right"
+    "footer";
+}
+
+@media (min-width: 821px) {
+  .grid-container {
+    grid-template-columns: 70% auto;
+    grid-template-rows: 8% 82% 10%;
+    grid-template-areas:
+      "header header"
+      "left right"
+      "footer footer";
+  }
+}
+
+@media (max-width: 820px) {
+  #espera {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="index.js"></script>
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <img src="./logo.png" alt="logo" class="logo"/>
+        <h1 class="title">Encrtiptador de Mensajes</h1>
+      </div>
+      <div class="left">
+        <div class="input-area">
+          <input type="text" id="encrypt" class="input" placeholder="Ingrese el texto aquí"/>
+        </div>
+        <div class="paraf-zone">
+          <p class="paraf">&#x2139 Sólo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="btns">
+          <button type="button" id="encryptButton" class="btnEnc">
+            Encriptar
+           </button>
+          <button type="button" id="decryptButton" class="btnDec">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+      <div class="right">
+        <img src="./img-espera.png" alt="logo" class="espera" id="espera"/>
+        <h1 class="txt" id="txt">Ningún mensaje fue encontrado</h1>
+        <h2 class="msg" id="msg">Ingresa el texto que desees encriptar o desencriptar</h2>
+        <textarea id="result" name="result" class="textArea"></textarea>
+        <button type="button" id="copyButton" class="btnCopy">Copiar</button>
+      </div>
+      <div class="footer">
+        <h1 class="name">Ernesto Velázquez</h1>
+        <a href="https://www.linkedin.com/in/ernesto-velázquez-velázquez-7aaa2460"><img src="linkedin.png" class="Linkedin"></a>
+        <a href="https://github.com/ernestovv85"><img src="github.png" class="github"/></a>
+      </div>
+    </div>
+  </body>
+  <script>
+    var btnEnc = document.querySelector("#encryptButton");
+    btnEnc.onclick = encrypter;
+    var btnDec = document.querySelector("#decryptButton");
+    btnDec.onclick = decrypter;
+    var btnCopy = document.querySelector("#copyButton");
+    btnCopy.onclick = copier;
+  </script>
+</html>
